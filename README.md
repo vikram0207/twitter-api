@@ -5,14 +5,14 @@
 How To Use
 ------
 
-#### Set access tokens ####
+#### Set access tokens in lib/config.php ####
 
-Class Config {
+
     const ACCESS_TOKEN = "___ACCESS__TOKEN___";
     const ACCESS_TOKEN_SECRET = "___ACCESS__TOKEN__SECRET___";
     const CONSUMER_KEY = "___CONSUMER__KEY___";
     const CONSUMER_SECRET = "___CONSUMER__SECRET___";
-}
+
 
 #### Include autoloader  ####
 
