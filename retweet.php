@@ -37,11 +37,11 @@ $requestMethod = 'GET';
 
 
 $twitter = new TwitterApi($url);
-$twitter->setGetfield($getfield)
+$response = $twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
-    ->request();
-$response = $twitter->getOnlyRetweet();
-//echo '<pre>';print_r($response);
+    ->request()
+    ->getOnlyRetweet(1);
+//$response = $twitter->getOnlyRetweet();
 
 $strHTML =  '<html><head><body>';
 $strHTML .= '<table><tr><td>URL :</td><td>'.$url.$getfield.'</td></tr>'

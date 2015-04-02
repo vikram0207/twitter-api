@@ -38,10 +38,11 @@ $requestMethod = 'GET';
 
 
 $twitter = new TwitterApi($url);
-$twitter->setGetfield($getfield)
+$response = $twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
-    ->request();
-$response = $twitter->getResponse();
+    ->request()
+    ->getResponse();
+//$response = $twitter->getResponse();
 
 $strHTML =  '<html><head><body>';
 $strHTML .= '<table><tr><td>URL :</td><td>'.$url.$getfield.'</td></tr>'
